@@ -13,6 +13,8 @@
 
 <meta name="date" content="2024-02-18" />
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 <title>Caso práctico final</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
@@ -257,6 +259,8 @@ if (window.hljs) {
 
 
 
+
+
 <style type="text/css">
 .main-container {
 max-width: 940px;
@@ -283,6 +287,21 @@ display: inline;
 }
 pre code {
 padding: 0;
+}
+div.a {
+  text-indent: 50px;
+}
+#grad1 {
+  height: 100%;
+  background-color: white; /* For browsers that do not support gradients */
+  background-image: linear-gradient(Azure, DarkSeaGreen, PaleGoldenRod);
+}
+#myDIV {
+  width: 100%;
+  /* padding: 50px 0; */
+  /* text-align: center; */
+  background-color: transparent;
+  margin-bottom: 20px;
 }
 </style>
 
@@ -338,7 +357,32 @@ display: none;
 
 </head>
 
-<body>
+<body id="grad1">
+
+  <button type="button" class="container-fluid btn btn-danger btn-lg d-grid gap-2 col-3 mx-auto mt-4" onclick="myFunction()">Ocultar/Mostrar Enunciado</button>
+
+  <div class="container" id="myDIV">
+    <h1 class="text-center display-1">Enunciado Caso Práctico 1</h1>
+    <h2 class="text-center">¿Cómo lograr el éxito rápido de un negocio de bicicletas compartidas?</h2>
+
+    <h3><strong>Escenario</strong></h3>
+    <h4 class="text-justify"><div class="a">Eres un analista de datos júnior que trabaja en el equipo de analistas de marketing de Cyclistic, una empresa de bicicletas compartidas de Chicago. La directora de marketing cree que el éxito futuro de la empresa depende de maximizar la cantidad de membresías anuales. Por lo tanto, tu equipo quiere entender qué diferencias existen en el uso de las bicicletas Cyclistic entre los ciclistas ocasionales y los miembros anuales. A través de estos conocimientos, tu equipo diseñará una nueva estrategia de marketing para convertir a los ciclistas ocasionales en miembros anuales. Sin embargo, antes de eso, los ejecutivos de Cyclistic deben aprobar tus recomendaciones; por eso, debes respaldar tu propuesta con una visión convincente de los datos y visualizaciones profesionales de los mismos.</div></h4>
+
+    <h3><strong>Personajes y equipos</strong></h3>
+    <h4 class="text-justify ms-5 mb-4">●	Cyclistic: Un programa de bicicletas compartidas que incluye 5,800 bicicletas y 600 estaciones. Cyclistic se destaca por ofrecer también bicicletas reclinadas, triciclos manuales y bicicletas de carga que ofrecen un uso más inclusivo de las bicicletas compartidas para las personas con discapacidad y los ciclistas que no pueden utilizar una bicicleta estándar de dos ruedas. La mayoría de los ciclistas eligen las bicicletas tradicionales, alrededor de un 8% de los ciclistas usan las opciones asistidas. Los usuarios de Cyclistic son más propensos a utilizar la bicicleta para recreación, pero alrededor del 30% la utiliza para ir al trabajo cada día.</h4>
+    <h4 class="text-justify ms-5 mb-4">●	Lily Moreno: La directora de marketing y tu gerente. Moreno es responsable del desarrollo de campañas e iniciativas para promover el programa de bicicletas compartidas. Las campañas pueden incluir correo electrónico, redes sociales y otros canales.</h4>
+    <h4 class="text-justify ms-5 mb-4">●	Equipo de análisis computacional de datos de marketing de Cyclistic: Un equipo de analistas de datos que se encargan de recopilar, analizar e informar datos que ayudan a conducir la estrategia de marketing de Cyclistic. Te incorporaste a este equipo hace seis meses y te has dedicado no solo a conocer la misión y las metas de negocios de Cyclistic, sino también a ver cómo puedes ayudar a Cyclistic a lograrlo, desde tu posición de analista de datos júnior.</h4>
+    <h4 class="text-justify ms-5">●	Equipo ejecutivo de Cyclistic: El equipo ejecutivo, sumamente detallista, decidirá si aprueba el programa de marketing recomendado.</h4>
+
+    <h3><strong>Acerca de la empresa</strong></h3>
+    <h4 class="text-justify"><div class="a">En 2016, Cyclistic lanzó una exitosa oferta de bicicletas compartidas. Desde entonces, el programa creció hasta alcanzar una flota de 5,824 bicicletas georreferenciadas y bloqueadas en una red de 692 estaciones en toda Chicago. Las bicicletas se pueden desbloquear desde una estación y devolverse en cualquier otra estación del sistema en cualquier momento.</div></h4>
+    <h4 class="text-justify"><div class="a">Hasta ahora, la estrategia de marketing de Cyclistic se basaba en la construcción de un reconocimiento de marca general y en atraer a amplios segmentos de consumidores. Uno de los enfoques que ayudó a hacer esto posible fue la flexibilidad de sus planes de precios: pases de un solo viaje, pases de un día completo y membresías anuales. A los clientes que compran pases de un solo viaje o pases de un día completo se los llama ciclistas ocasionales. Los clientes que compran membresías anuales se llaman miembros de Cyclistic.</div></h4>
+    <h4 class="text-justify"><div class="a">Los analistas financieros de Cyclistic llegaron a la conclusión de que los miembros anuales son mucho más rentables que los ciclistas ocasionales. Aunque la flexibilidad de precios ayuda a Cyclistic a atraer más clientes, Moreno cree que maximizar el número de miembros anuales será clave para el crecimiento futuro. En lugar de crear una campaña de marketing que apunte a todos los clientes nuevos, Moreno cree que hay muchas posibilidades de convertir a los ciclistas ocasionales en miembros. Ella señala que los ciclistas ocasionales ya conocen el programa de Cyclistic y han elegido a Cyclistic para sus necesidades de movilidad.</div></h4>
+    <h4 class="text-justify"><div class="a">Moreno estableció una meta clara: Diseñar estrategias de marketing orientadas a convertir a los ciclistas ocasionales en miembros anuales. Sin embargo, para hacer eso, el equipo de analistas de marketing necesita entender mejor cómo difieren los miembros anuales y los ciclistas ocasionales, por qué los ciclistas ocasionales comprarían una membresía y cómo los medios digitales podrían afectar sus tácticas de marketing. Moreno y su equipo están interesados en analizar los datos históricos de viajes en bicicleta de Cyclistic para identificar tendencias.</div></h4>
+    <h5 class="text-justify pt-4 fst-italic"><strong>NOTA:</strong> Los datos históricos de los viajes de Cyclistic para analizar e identificar tendencias: <a href="https://divvy-tripdata.s3.amazonaws.com/index.html">Descarga los datos de viajes de Cyclistic aquí</a>. (Nota: Los conjuntos de datos tienen un nombre diferente porque Cyclistic es una empresa ficticia. A los fines de este caso práctico, los conjuntos de datos son apropiados y te permitirán responder las preguntas de la empresa. Los datos han sido proporcionados por Motivate International Inc. bajo esta <a href="https://divvybikes.com/data-license-agreement">licencia</a>.) Estos son datos públicos que puedes usar para explorar cómo difieren los tipos de clientes que usan las bicicletas Cyclistic. Sin embargo, ten en cuenta que, por cuestiones de privacidad de los datos, se te prohíbe usar información de identificación personal de los ciclistas. Esto significa que no podrás conectar las compras de pases con los números de tarjetas de crédito para determinar si los ciclistas ocasionales viven en el área de servicio de Cyclistic o si compraron varios pases de un solo viaje.</h5>
+
+
+  </div>
 
 
 <div class="container-fluid main-container">
@@ -1457,6 +1501,19 @@ $(document).ready(function () {
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
